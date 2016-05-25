@@ -6,4 +6,5 @@
 <p><%= item.complete %></p>
 <%= link_to 'Show item', item_path(item) %>
 <%= link_to 'Edit item', edit_item_path(item) %>
+<%= link_to 'Delete item', item, method: :delete %>
 <% end %>
