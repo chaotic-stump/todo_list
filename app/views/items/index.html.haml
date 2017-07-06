@@ -2,9 +2,7 @@
 %h1 Items
 %p= link_to 'New Item', new_item_path, :class => 'button button-primary'
 - @items.each do |item|
-  %h2= item.name
-  %h3= item.description
-  %p= item.complete
+  %li= "#{item.name} - #{item.description} - #{item.complete}"
   = link_to 'Show item', item_path(item), :class => 'button button-success'
   = link_to 'Edit item', edit_item_path(item), :class => 'button button-primary'
   = link_to 'Delete item', item, :class => 'button button-warning', method: :delete
